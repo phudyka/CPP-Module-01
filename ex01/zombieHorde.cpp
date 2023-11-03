@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 14:04:35 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/03 11:24:33 by phudyka          ###   ########.fr       */
+/*   Created: 2023/11/03 11:30:44 by phudyka           #+#    #+#             */
+/*   Updated: 2023/11/03 14:34:00 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void	Zombie::announce(void) const
+Zombie* zombieHorde(int N, std::string name)
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+	Zombie*	horde;
 
-int	main(void)
-{
-	Zombie* heapZ = newZombie("HeapZombie");
-	heapZ->announce();
-	delete heapZ;
-	randomChump("StackZombie");
-	return (0);
+	horde = new Zombie[N];
+	for (int i = 0; i < N; i++)
+	{
+		std::stringstream	ss;
+		ss << name << i;
+		std::string	zName = ss.str();
+
+		Zombie* heapZ = newZombie(zName);
+		heapZ->announce();
+		delete (heapZ);
+	}
+	return (horde);
 }

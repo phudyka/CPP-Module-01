@@ -5,23 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 14:04:35 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/03 11:24:33 by phudyka          ###   ########.fr       */
+/*   Created: 2023/11/03 15:06:03 by phudyka           #+#    #+#             */
+/*   Updated: 2023/11/03 15:22:38 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-void	Zombie::announce(void) const
+int main(void)
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-int	main(void)
-{
-	Zombie* heapZ = newZombie("HeapZombie");
-	heapZ->announce();
-	delete heapZ;
-	randomChump("StackZombie");
+	std::string brain = "HI THIS IS BRAIN";
+	std::string *stringPTR = &brain;
+	std::string &stringREF = brain;
+ 
+	std::cout << "string = "<< brain << std::endl;
+	std::cout << "stringPTR = "<< stringPTR << std::endl;
+	std::cout << "stringREF = "<< stringREF << std::endl;
 	return (0);
 }

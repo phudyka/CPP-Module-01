@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 14:04:35 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/03 11:24:33 by phudyka          ###   ########.fr       */
+/*   Created: 2023/11/03 15:39:00 by phudyka           #+#    #+#             */
+/*   Updated: 2023/11/03 15:47:32 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef	WEAPON_HPP
+# define WEAPON_HPP
 
-void	Zombie::announce(void) const
+#include <string>
+#include <iostream>
+
+class Weapon
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+private:
+	std::string name;
+public:
+	Weapon();
+	~Weapon();
+};
+
+Weapon::Weapon(/* args */)
+{
 }
 
-int	main(void)
+Weapon::~Weapon()
 {
-	Zombie* heapZ = newZombie("HeapZombie");
-	heapZ->announce();
-	delete heapZ;
-	randomChump("StackZombie");
-	return (0);
 }
+
+#endif

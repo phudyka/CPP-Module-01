@@ -5,23 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 14:04:35 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/03 11:24:33 by phudyka          ###   ########.fr       */
+/*   Created: 2023/11/03 15:37:38 by phudyka           #+#    #+#             */
+/*   Updated: 2023/11/03 15:46:19 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+#include "Weapon.hpp"
 
-void	Zombie::announce(void) const
+int main(void)
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-int	main(void)
-{
-	Zombie* heapZ = newZombie("HeapZombie");
-	heapZ->announce();
-	delete heapZ;
-	randomChump("StackZombie");
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
 	return (0);
 }

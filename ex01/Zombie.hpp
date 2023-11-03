@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 14:04:35 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/03 11:24:33 by phudyka          ###   ########.fr       */
+/*   Created: 2023/10/30 14:04:46 by phudyka           #+#    #+#             */
+/*   Updated: 2023/11/03 14:34:22 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-void	Zombie::announce(void) const
-{
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#include <string>
+#include <sstream>
+#include <iostream>
 
-int	main(void)
+class	Zombie
 {
-	Zombie* heapZ = newZombie("HeapZombie");
-	heapZ->announce();
-	delete heapZ;
-	randomChump("StackZombie");
-	return (0);
-}
+private:
+	std::string	name;
+public:
+
+	Zombie();
+	Zombie(const std::string& name);
+	~Zombie();
+
+	void	announce(void) const;
+};
+
+Zombie	*newZombie(std::string name);
+Zombie	*zombieHorde(int N, std::string name);
+
+#endif

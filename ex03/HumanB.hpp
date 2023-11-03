@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 14:04:35 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/03 11:24:33 by phudyka          ###   ########.fr       */
+/*   Created: 2023/11/03 15:38:57 by phudyka           #+#    #+#             */
+/*   Updated: 2023/11/03 15:44:34 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef	HUMANB_HPP
+# define HUMANB_HPP
 
-void	Zombie::announce(void) const
+#include <string>
+#include <iostream>
+#include "Weapon.hpp"
+
+class HumanB
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+private:
+	/* data */
+public:
+	HumanB(/* args */);
+	~HumanB();
+};
+
+HumanB::HumanB(/* args */)
+{
 }
 
-int	main(void)
+HumanB::~HumanB()
 {
-	Zombie* heapZ = newZombie("HeapZombie");
-	heapZ->announce();
-	delete heapZ;
-	randomChump("StackZombie");
-	return (0);
 }
+
+#endif

@@ -6,34 +6,34 @@
 #    By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 11:49:28 by phudyka           #+#    #+#              #
-#    Updated: 2023/10/30 14:06:45 by phudyka          ###   ########.fr        #
+#    Updated: 2023/11/03 15:32:51 by phudyka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-TARGET =  
+NAME = BraiiiiiiinnnzzzZ
 
-CXX = c++
-
-CXXFLAGS = -Wall -Wextra -Werror
-
-SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp Zombie.hpp
+SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-.PHONY: all clean fclean re
+CXX = c++
 
-all: $(TARGET)
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-$(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CXX) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -std=c++98 -c $< -o $@
+	$(CXX) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(TARGET)
+	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

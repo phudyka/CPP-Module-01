@@ -6,17 +6,17 @@
 #    By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 11:49:28 by phudyka           #+#    #+#              #
-#    Updated: 2023/10/30 13:45:30 by phudyka          ###   ########.fr        #
+#    Updated: 2023/11/03 15:34:07 by phudyka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-TARGET = 
+TARGET = Unnecessary_violence
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror
 
-SRCS = 
+SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
