@@ -6,17 +6,17 @@
 #    By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 11:49:28 by phudyka           #+#    #+#              #
-#    Updated: 2023/10/30 13:45:30 by phudyka          ###   ########.fr        #
+#    Updated: 2023/11/06 16:28:54 by phudyka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-TARGET = 
+TARGET = Sed_is_for_losers
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror
 
-SRCS = 
+SRCS = main.cpp	\
 
 OBJS = $(SRCS:.cpp=.o)
 
