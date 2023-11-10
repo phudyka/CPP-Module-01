@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:37:02 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/06 15:33:57 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/10 15:53:04 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ HumanA::~HumanA(void)
 
 void	HumanA::attack(void)
 {
-	std::cout << this->_name << " attacks with " << this->_weapon.getType() << std::endl;
+	std::cout << this->_name << " attacks with their " << this->_weapon.getType() << std::endl;
 }
 
 void	HumanA::setWeapon(Weapon weapon)

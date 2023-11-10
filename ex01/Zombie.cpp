@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:04:43 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/03 14:34:30 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/10 15:49:29 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,9 @@ Zombie::Zombie(const std::string& newName) : name(newName) {}
 Zombie::~Zombie()
 {
 	std::cout << this->name << " has been destroyed" << std::endl;
+}
+
+Zombie*	newZombie(std::string name)
+{
+	return (new Zombie(name));
 }
