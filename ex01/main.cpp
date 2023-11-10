@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:04:35 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/03 14:34:26 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/10 14:11:00 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@ void	Zombie::announce(void) const
 	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-int	main()
+int	main(void)
 {
-	zombieHorde(8, "Zombie ");
+	Zombie*	Horde;
+	
+	Horde = zombieHorde(8, "Zombie ");
+	delete[] (Horde);
 	return (0);
 }

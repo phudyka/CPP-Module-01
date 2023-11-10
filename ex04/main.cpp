@@ -6,14 +6,14 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:39:51 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/07 15:16:37 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/10 15:42:30 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fstream>
 #include <iostream>
 
-int	replace(char **argv, std::string str)
+int	ft_replace(char **argv, std::string str)
 {
 	std::ofstream	outfile;
 	int				pos;
@@ -56,5 +56,5 @@ int	main(int argc, char **argv)
 	while(!infile.eof() && infile >> std::noskipws >> c)
 		str += c;
 	infile.close();
-	return (replace(argv, str));
+	return (ft_replace(argv, str));
 }

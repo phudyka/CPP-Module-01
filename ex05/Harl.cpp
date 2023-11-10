@@ -6,11 +6,15 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:20:00 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/07 15:55:43 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/10 15:44:02 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+
+Harl::Harl() {}
+
+Harl::~Harl() {}
 
 void Harl::debug()
 {
