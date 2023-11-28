@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:20:08 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/07 16:17:36 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/28 16:47:44 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 class Harl
 {
 	private:
-		void debug();
-		void info();
-		void warning();
-		void error();
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
 	
 	public:
-		Harl(void);
-		~Harl(void);
+		Harl();
+		~Harl();
 		void complain(std::string level);
 };
 

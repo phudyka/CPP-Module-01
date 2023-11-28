@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:04:46 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/03 11:22:53 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/28 14:18:39 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,13 @@
 
 class	Zombie
 {
-private:
-	std::string	name;
-public:
-
-	Zombie();
-	Zombie(const std::string& name);
-	~Zombie();
-
-	void	announce(void) const;
+	private:
+		const std::string	name;
+	public:
+		Zombie();
+		Zombie(const std::string& name);
+		~Zombie();
+		void	announce(void) const;
 };
 
 void	randomChump(std::string name);

@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:38:54 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/10 14:14:05 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/28 16:30:06 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ class HumanA
 		HumanA(std::string name, Weapon& weapon);
 		~HumanA(void);
 
-
-		void	attack(void);
-		void	setWeapon(Weapon weapon);
+		void	attack(void) const;
 };
 
 #endif

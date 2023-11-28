@@ -6,17 +6,17 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:38:39 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/06 15:26:53 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/28 16:43:09 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(std::string type) : _type(type){}
+Weapon::Weapon(std::string type) : _type(type) {}
 
-Weapon::~Weapon(void){}
+Weapon::~Weapon() {}
 
-const	std::string& Weapon::getType(void)
+std::string const	&Weapon::getType(void) const
 {
 	return (this->_type);
 }

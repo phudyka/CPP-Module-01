@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:38:57 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/10 14:13:57 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/28 16:45:30 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class HumanB
 		HumanB(std::string name);
 		~HumanB(void);
 
-		void	attack(void);
-		void	setWeapon(Weapon &weapon);
+		void	attack(void) const;
+		void	setWeapon(Weapon &newWeapon);
 };
 
 #endif
